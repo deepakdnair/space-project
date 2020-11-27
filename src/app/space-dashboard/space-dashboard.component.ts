@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServices } from '../services/api.services';
 import { finalize } from 'rxjs/operators';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-space-dashboard',
@@ -17,11 +18,19 @@ export class SpaceDashboardComponent implements OnInit {
   isLaunchFilter: any;
   isLandFilter: any;
   loading = false;
+  title = 'spaceX';
   constructor(private api: ApiServices,
               private activatedRoute: ActivatedRoute,
-              private route: Router) { }
+              private route: Router,
+              private titleTag: Title,
+              private metaTag: Meta) { }
 
   ngOnInit(): void {
+    this.titleTag.setTitle(this.title);
+    this.metaTag.addTag({
+      name: 'description',
+      content: 'App showing different spacex launches'
+    });
 
     this.activatedRoute.queryParams.subscribe(params => {
       this.params = { ...params };
