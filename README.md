@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## performance best practice screenshot
 [
-![Screenshot 2020-11-27 at 11 43 04 PM](https://user-images.githubusercontent.com/33152342/100475949-617dcb00-310a-11eb-8d56-505d6fc5125a.png)
+![Screenshot 2020-11-27 at 11 57 44 PM](https://user-images.githubusercontent.com/33152342/100476750-6b083280-310c-11eb-953d-aa4d10b5f4f5.png)
 ](url)
