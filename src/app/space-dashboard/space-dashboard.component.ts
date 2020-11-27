@@ -34,10 +34,6 @@ export class SpaceDashboardComponent implements OnInit {
       if (this.params.land_success) {
         this.isLandFilter = this.params.land_success;
       }
-
-      console.log('year ' + this.isYearFilter);
-      console.log('lanuch ' + this.isLaunchFilter);
-      console.log('land ' + this.isLandFilter);
       this.getData();
     });
 
