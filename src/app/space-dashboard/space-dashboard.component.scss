@@ -7,10 +7,10 @@
 
 .main-container {
     background-color: #f2f2f7;
-    display: flex;
+    display: grid;
    
     .filter-container {
-        width: 18%;
+        width: 100%;
        
         .filters {
             background-color: white;
@@ -53,7 +53,7 @@
     }
 
     .data-container {
-        width: 82%;
+        width: 98%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -61,7 +61,7 @@
             border: 1px solid white;
             border-radius: 15px;
             padding: 10px;
-            width: 21%;
+            width: 90%;
             float: left;
             background-color: white;
             height: 300px;
@@ -107,65 +107,14 @@
             padding-top: 40px;
         }
     }
-    #preloader {
-        position:fixed;
-        left:0;
-        right:0;
-        top:0;
-        bottom:0;
-       // background-color:#FFF;
-       // z-index:9999;
-      }
-      
-      #preloader .preloader {
-        position:absolute;
-        left:55%;
-        top:30%;
-        -webkit-transform: translate(-50% , -50%);
-        -ms-transform: translate(-50% , -50%);
-        transform: translate(-50% , -50%);
-      }
-      
-      #preloader .preloader:after {
-        content:"";
-        display:block;
-        width:40px;
-        height:40px;
-        border: 1px solid #EBEBEB;
-        border-top: 3px solid #007FFF;
-        border-radius: 50%;
-        -webkit-animation: 1s preloader linear infinite;
-        animation: 1s preloader linear infinite;
-      }
-      
-      @-webkit-keyframes preloader {
-        from { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
-        to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
-      }
-      
-      @keyframes preloader {
-        from { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
-        to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
-      }
+    #preloader { display: none;}
     
 }
 
 @media(max-width: 700px) {
     .main-container {
-        display: grid;
-        .filter-container {
-            width: 100%;
-        }
-    
-        .data-container {
-            width: 98%;
-            .single-data-cont {
-               
-                width: 90%;
-                
-            }
-        }
-        #preloader { display: none;}
+
+       
     }
 }
 
@@ -184,5 +133,65 @@
                 
             }
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        display: flex;
+        .filter-container {
+            width: 18%;
+        }
+    
+        .data-container {
+            width: 82%;
+            .single-data-cont {
+               
+                width: 21%;
+                
+            }
+        }
+
+        #preloader {
+            display: block;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+           // background-color:#FFF;
+           // z-index:9999;
+          }
+          
+          #preloader .preloader {
+            position:absolute;
+            left:55%;
+            top:30%;
+            -webkit-transform: translate(-50% , -50%);
+            -ms-transform: translate(-50% , -50%);
+            transform: translate(-50% , -50%);
+          }
+          
+          #preloader .preloader:after {
+            content:"";
+            display:block;
+            width:40px;
+            height:40px;
+            border: 1px solid #EBEBEB;
+            border-top: 3px solid #007FFF;
+            border-radius: 50%;
+            -webkit-animation: 1s preloader linear infinite;
+            animation: 1s preloader linear infinite;
+          }
+          
+          @-webkit-keyframes preloader {
+            from { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+            to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+          }
+          
+          @keyframes preloader {
+            from { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+            to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+          }
     }
 }

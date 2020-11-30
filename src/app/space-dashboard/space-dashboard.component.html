@@ -51,8 +51,8 @@
                 </div>
                 <div  class="sub-sec">
                     <span class="head">Successful Landing: </span>
-                    <span class="value">{{data.land_success}}</span>
-                    <span *ngIf="!data.land_success" class="value">  N/A</span>
+                    <span class="value">{{data?.rocket?.first_stage?.cores[0]?.land_success}}</span>
+                    <span *ngIf="data?.rocket?.first_stage?.cores[0]?.land_success == null" class="value">  N/A</span>
                 </div>
             </div>
         </ng-container>
