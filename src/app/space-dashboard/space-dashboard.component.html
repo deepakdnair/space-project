@@ -3,7 +3,9 @@
 <div class="main-container">
   
     <div class="filter-container">
+        
         <div class="filters">
+            <div class="fil-head">Filters</div>
             <div class="first-filter">
                 <div class="filter-name">Launch Year</div>
                 <div class="filter-cont">
@@ -62,5 +64,6 @@
     </div>
 
     <div *ngIf="loading" id='preloader'><div class='preloader'></div></div>
-
+    
 </div>
+<div *ngIf="!loading" class="dev-name">Developed by: Deepak D Nair</div>
