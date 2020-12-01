@@ -31,6 +31,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Screenshot 2020-11-27 at 11 57 44 PM](https://user-images.githubusercontent.com/33152342/100476750-6b083280-310c-11eb-953d-aa4d10b5f4f5.png)
 ](url)
 
+## code coverage
+
+![Screenshot 2020-12-01 at 6 15 05 PM](https://user-images.githubusercontent.com/33152342/100742706-3c86a200-3401-11eb-96eb-6d4af0842751.png)
+
 ## Design Approach
 
 Entire view is divided into two sections- filter section and data section with a 20:80 width ratio.
